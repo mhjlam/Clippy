@@ -19,3 +19,7 @@ Items can be removed by selecting them and pressing `Delete`. Item navigation (`
 Pressing the "Clear" button in the main window or icon context menu will remove all the saved clipboard items.
 
 Right click the notification icon and choose "Exit" to exit Clippy.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
