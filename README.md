@@ -4,6 +4,8 @@ A simple clipboard history manager for Windows 11.
 
 Written in C# 12.0, using .NET 8.0.
 
+![Screenshot](media/clippy.png)
+
 ## User's Guide
 
 Clippy starts minimized to the notification area. Clicking the notification icon with the left mouse button shows Clippy's main window. It is always displayed on top of everything else.

@@ -1,6 +1,5 @@
 ﻿using Clippy.Win32;
 using System.ComponentModel;
-using System.Runtime.InteropServices;
 
 namespace Clippy;
 

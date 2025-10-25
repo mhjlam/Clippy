@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace Clippy;
+﻿namespace Clippy;
 
 public partial class ClippyForm : Form
 {
@@ -109,7 +106,9 @@ public partial class ClippyForm : Form
         try
         {
             if (ClipsListBox.SelectedItem is not string item)
-                return;
+            { 
+                return; 
+            }
 
             item = item.Trim();
             suppressClipboardEvent = true;
@@ -142,13 +141,19 @@ public partial class ClippyForm : Form
         {
             int selStart = InputTextBox.SelectionStart;
             int selLength = InputTextBox.SelectionLength;
+
             if (selStart > 0 && selLength == 0)
             {
                 int prev = selStart - 1;
                 while (prev >= 0 && char.IsWhiteSpace(InputTextBox.Text[prev]))
+                {
                     prev--;
+                }
                 while (prev >= 0 && !char.IsWhiteSpace(InputTextBox.Text[prev]))
+                {
                     prev--;
+                }
+
                 int wordStart = prev + 1;
                 InputTextBox.Text = InputTextBox.Text.Remove(wordStart, selStart - wordStart);
                 InputTextBox.SelectionStart = wordStart;
@@ -168,13 +173,19 @@ public partial class ClippyForm : Form
             int selStart = InputTextBox.SelectionStart;
             int selLength = InputTextBox.SelectionLength;
             int textLen = InputTextBox.Text.Length;
+
             if (selStart < textLen && selLength == 0)
             {
                 int next = selStart;
                 while (next < textLen && char.IsWhiteSpace(InputTextBox.Text[next]))
+                {
                     next++;
+                }
                 while (next < textLen && !char.IsWhiteSpace(InputTextBox.Text[next]))
+                {
                     next++;
+                }
+
                 int wordEnd = next;
                 InputTextBox.Text = InputTextBox.Text.Remove(selStart, wordEnd - selStart);
                 InputTextBox.SelectionStart = selStart;
