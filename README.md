@@ -1,10 +1,15 @@
 # Clippy
 
-A simple clipboard history manager for Windows 11.
+**Simple Clipboard History Manager for Windows 11**
+
+> Maurits Lam  
+> 2025
+
+<p align="center">
+  <img src="media/clippy.png" alt="Screenshot" height="400"/>
+<p>
 
 Written in C# 12.0, using .NET 8.0.
-
-![Screenshot](media/clippy.png)
 
 ## User's Guide
 
